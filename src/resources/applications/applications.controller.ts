@@ -27,11 +27,12 @@ class CountryController extends Controller {
 
     public getAllApplications = async (req: any, res: any) => {
         const data = await this.model.findAll({
-            attributes: ['id'],
+            attributes: ['id', 'createdAt', 'updatedAt'],
             include: [{
                 model: User,
-                attributes:
-                    ['firstname', 'lastname'],
+                attributes: {
+                    exclude: ['createdAt', 'updatedAt']
+                },
                 order: [
                     ['name', 'ASC'],
                 ]
