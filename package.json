@@ -14,7 +14,8 @@
     "db:create": "npm run sequelize db:create",
     "db:migrate:seed": "npm run db:migrate && npm run db:seed",
     "db:reset:migrate:seed": "npm run db:reset  && npm run db:create && npm run db:migrate && npm run db:seed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker": "docker-compose up --force-recreate"
   },
   "keywords": [],
   "author": "",
